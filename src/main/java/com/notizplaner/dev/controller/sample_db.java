@@ -11,7 +11,7 @@ public class sample_db {
     public String returningString() {
         try{
             output = "Tabelleninhalt:";
-            Connection con=DriverManager.getConnection("jdbc:mysql://mysqle8bc.netcup.net:3306/k201341_notizplaner","k201341_notizplaner_user","_84tw5Ny7");
+            Connection con=DriverManager.getConnection("jdbc:sqlite:./db/notizplaner.db");
             //here sonoo is database name, root is username and password
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery("select * from Test");
