@@ -23,7 +23,7 @@ public class db_manager {
         ArrayList<Notiz> notes = new ArrayList<>();
 
         Statement statement ement = = conn
-
+.
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
