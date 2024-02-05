@@ -24,7 +24,7 @@ public class db_manager {
 
         String sql = "SELECT id, name, text FROM notes";
         try (Statement stmt = connection_manager.createStatement();
-            ResultSet resName = stmt.executeQuery(sqlName);) {
+            ResultSet results = stmt.executeQuery(sqlName);) {
                 while
             }
         return notes;
