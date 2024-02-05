@@ -34,7 +34,17 @@ public class db_manager {
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
-
+        String sql = "INSERT INTO notes(id, name, text) VALUES(?, ?, ?)";
+        
+        try (PreparedStatement pstmt = connection_manager.prepareStatement(sql)) {
+            for (Notiz note : notes) {
+                pstmt.setInt(1, note.getID());
+                pstmt.setString(2, note.getName());
+                pstmt.setString(3, note.getText());
+                pstmt.executeUpdate();
+            }
+        } catch (SQLException sqlException) {
+            System.out.println(sqlException);
+        }
     }
-
 }
