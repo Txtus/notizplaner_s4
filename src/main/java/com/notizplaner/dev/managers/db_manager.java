@@ -22,7 +22,7 @@ public class db_manager {
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
-        Statement statement 
+        Statement statement ement = 
 
         return notes;
     }
