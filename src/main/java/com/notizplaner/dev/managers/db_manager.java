@@ -25,7 +25,7 @@ public class db_manager {
         String sqlName = "SELECT name FROM notes";
         String sqlText = "SELECT text FROM notes";
 
-        try (Connection conn = this.)
+        try (Connection conn = this.conne)
 
         return notes;
     }
