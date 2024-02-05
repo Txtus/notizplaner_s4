@@ -22,8 +22,8 @@ public class db_manager {
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
-        Statement statement ement = = conn
-.
+        Statement statement = connection_manager
+
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
