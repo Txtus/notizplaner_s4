@@ -25,7 +25,9 @@ public class db_manager {
         String sqlName = "SELECT name FROM notes";
         String sqlText = "SELECT text FROM notes";
 
-        try (PreparedStatement pstmt = connection_manager.prepareStatement(sqlName))
+        try (PreparedStatement pstmt = connection_manager.prepareStatement(sqlName)) {
+            
+        }
 
         return notes;
     }
