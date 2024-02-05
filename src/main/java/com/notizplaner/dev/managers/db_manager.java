@@ -29,6 +29,7 @@ public class db_manager {
                     notes.add(new Notiz(results.getInt("id"), results.getString("name"), results.getString("text")));
                 }
             }
+        catch
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
