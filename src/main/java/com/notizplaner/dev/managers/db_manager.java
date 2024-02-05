@@ -31,9 +31,6 @@ public class db_manager {
             } catch (SQLException e sqlExceptionsqlException) {
                 System.out.println(sqlException);
             }
-        if (notes.) {
-            return notes;
-        }
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
