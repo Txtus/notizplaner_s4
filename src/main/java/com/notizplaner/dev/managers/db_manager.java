@@ -18,7 +18,7 @@ public class db_manager {
         
     }
 
-    // CRUD
+    // Get and 
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
