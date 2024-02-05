@@ -26,7 +26,7 @@ public class db_manager {
         try (Statement stmt = connection_manager.createStatement();
             ResultSet results = stmt.executeQuery(sql);) {
                 while (rs.next()) {
-                    notes.add(new Notiz(results.getInt(), results.getStringtring(""), results.getStringtring("")))
+                    notes.add(new Notiz(results.getInt(), results.getString(""), results.getStringtring("")))
                 }
             }
         return notes;
