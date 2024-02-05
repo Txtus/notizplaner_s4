@@ -22,6 +22,8 @@ public class db_manager {
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
+        
+
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
