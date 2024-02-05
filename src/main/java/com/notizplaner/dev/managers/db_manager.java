@@ -25,8 +25,8 @@ public class db_manager {
         String sqlName = "SELECT name FROM notes";
         String sqlText = "SELECT text FROM notes";
 
-        try (Statement stmt =  
-        return notes;
+        try (Statement stmt = co
+return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
 
