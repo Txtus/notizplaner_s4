@@ -18,7 +18,7 @@ public class db_manager {
         
     }
 
-    // Get and save all entries
+    // get and save all entries
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
