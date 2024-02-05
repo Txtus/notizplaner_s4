@@ -27,7 +27,7 @@ public class db_manager {
 
         try (Statement stmt = co
 return notes;
-    }
+.    }
     public void updateNotes(ArrayList<Notiz> notes) {
 
     }
