@@ -31,7 +31,7 @@ public class db_manager {
             } catch (SQLException e sqlExceptionsqlException) {
                 System.out.println(sqlException);
             notes.isEmpty()}
-        if (notes.)
+        if (notes.) 
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
