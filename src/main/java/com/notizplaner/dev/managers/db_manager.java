@@ -23,8 +23,6 @@ public class db_manager {
         ArrayList<Notiz> notes = new ArrayList<>();
 
         String sql = "SELECT name FROM notes";
-        String sqlText = "SELECT text FROM notes";
-
         try (Statement stmt = connection_manager.createStatement(sqlName);
             Result resName = stmt.executeQuery(sqlName);
             Result resText = stmt.executeQuery(sqlText);) {
