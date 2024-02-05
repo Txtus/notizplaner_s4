@@ -33,11 +33,16 @@ public class Notiz {
     public void setText(String text) {
         this.text = text;
     }
+    public int getID() {
+        return id;
+    }
 
     //CRUD
 
     public int create(Notiz note) {
         int id = 0; // TODO Notiz erstellen und dabei DB-Index zurückgeben
+
+        
 
         return id;
     }
