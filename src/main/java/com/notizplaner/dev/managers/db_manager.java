@@ -27,7 +27,7 @@ public class db_manager {
 
         try (Statement stmt = connection_manager.createStatement(sqlName);
             Result resName = stmt.executeQuery(sqlName);
-            Result resText = stmt.executeQuery(sqlText);)
+            Result resText = stmt.executeQuery(sqlText);) 
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
