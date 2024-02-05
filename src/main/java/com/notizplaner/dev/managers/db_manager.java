@@ -29,7 +29,7 @@ public class db_manager {
 
         return notes;
     }
-    public void updateNotes(ArrayList<Notiz> notes) {
+    public void updateNotes(ArrayList<Notiz> notes) {)
 
     }
 
