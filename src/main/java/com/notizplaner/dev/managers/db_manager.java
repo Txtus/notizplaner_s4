@@ -28,7 +28,7 @@ public class db_manager {
                 while (rs.next()) {
                     notes.add(new Notiz(results.getInt("id"), results.getString("name"), results.getString("text")));
                 }
-            } catch (SQLException sqlExceptionsqlException) {
+            } catch (SQLException sqlException) {
                 System.out.println(sqlException);
             }
         return notes;
