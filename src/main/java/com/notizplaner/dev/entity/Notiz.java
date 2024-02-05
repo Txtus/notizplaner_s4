@@ -15,7 +15,7 @@ public class Notiz {
         text = "";
 
     }
-    public Notiz(String name, String text) {
+    public Notiz(int id, String name, String text) {
         this.name = name;
         this.text = text;
     }
