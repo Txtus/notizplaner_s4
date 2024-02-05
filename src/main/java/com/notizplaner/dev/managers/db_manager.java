@@ -29,7 +29,7 @@ public class db_manager {
                     notes.add(new Notiz(results.getInt("id"), results.getString("name"), results.getString("text")));
                 }
             } catch (SQLException e sqlExceptionsqlException) {
-                
+                System.out.println(sqlException);
             }
         return notes;
     }
