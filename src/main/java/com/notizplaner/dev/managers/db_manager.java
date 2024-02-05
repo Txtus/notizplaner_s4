@@ -26,7 +26,7 @@ public class db_manager {
         String sqlText = "SELECT text FROM notes";
 
         try (Statement stmt = connection_manager.createStatement();
-             Result res = 
+             Result res = stmt.
         return notes;
     }
     public void updateNotes(ArrayList<Notiz> notes) {
