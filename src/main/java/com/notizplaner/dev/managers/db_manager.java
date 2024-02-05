@@ -18,7 +18,7 @@ public class db_manager {
         
     }
 
-    // Get and 
+    // Get and save all entries
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
@@ -26,7 +26,7 @@ public class db_manager {
         try (Statement stmt = connection_manager.createStatement();
             ResultSet results = stmt.executeQuery(sql);) {
                 while (rs.next()) {
-                    notes.add(new Notiz(results.getInt()("id")))
+                    notes.add(new Notiz(results.getInt()))
                 }
             }
         return notes;
