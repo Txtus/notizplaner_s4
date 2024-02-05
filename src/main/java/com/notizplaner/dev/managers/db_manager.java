@@ -22,7 +22,7 @@ public class db_manager {
     public ArrayList<Notiz> getAllNotes() {
         ArrayList<Notiz> notes = new ArrayList<>();
 
-        String sql 
+        String sql = 
 
         Statement statement = connection_manager.
 
