@@ -33,6 +33,9 @@ public class Notiz {
     public void setText(String text) {
         this.text = text;
     }
+    public void setID(int id) {
+        this.id = id;
+    }
     public int getID() {
         return id;
     }
