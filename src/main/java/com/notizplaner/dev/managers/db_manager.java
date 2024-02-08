@@ -5,12 +5,12 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class db_manager {
-    private final String CONNECTIONURL = "jdbc:sqlite:./db/notizplaner.db";
+    private final String CONNECTIONURL = "jdbc:sqlite:./notizplaner_s4-master/db/notizplaner.db";
     private Connection connection_manager;
     
     public db_manager() {
         try {
-            connection_manager = DriverManager.getConnection("jdbc:sqlite:./db/notizplaner.db");
+            connection_manager = DriverManager.getConnection("jdbc:sqlite:./notizplaner_s4-master/db/notizplaner.db");
         } catch(SQLException sqlException) {
             System.out.println("Could not establish sql connection to following SQLIT file: " + CONNECTIONURL);
             System.out.println(sqlException);
@@ -25,7 +25,7 @@ public class db_manager {
         String sql = "SELECT id, name, text FROM notes";
         try (Statement stmt = connection_manager.createStatement();
             ResultSet results = stmt.executeQuery(sql);) {
-                while (rs.next()) {
+                while (results.next()) {
                     notes.add(new Notiz(results.getInt("id"), results.getString("name"), results.getString("text")));
                 }
             } catch (SQLException sqlException) {
@@ -46,5 +46,33 @@ public class db_manager {
         } catch (SQLException sqlException) {
             System.out.println(sqlException);
         }
+    }
+
+    public Notiz geNotiz(int id) {
+        Notiz p = new Notiz();
+
+
+        String sql = "SELECT * FROM notes WHERE id=?";
+        
+        try (PreparedStatement pstmt = connection_manager.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            
+            try {
+                ResultSet results = pstmt.executeQuery();
+                while (results.next()) {
+                    p.setName(results.getString("name"));
+                    p.setText(results.getString("text"));
+                    p.setID(results.getInt("id"));
+                }
+            } catch (SQLException sq) {
+                sq.printStackTrace();
+                return p;
+            }
+        } catch (SQLException sqlException) {
+            System.out.println(sqlException);
+            return p;
+        }
+
+        return p;
     }
 }
